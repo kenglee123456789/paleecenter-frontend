@@ -1,0 +1,42 @@
+* {
+    font-family: 'Noto Sans Lao';
+}
+
+.card.border-primary h4,
+h5 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.search-input-container {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+th,
+td {
+    text-align: center;
+    vertical-align: middle;
+}

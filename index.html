@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EduCenter Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container" style="font-weight: bold;">
+            <a class="navbar-brand" href="#">Palee Elite Training Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">ໜ້າຫຼັກ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ລາຍລະອຽດ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">ຫຼັກສູດ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">ຕິດຕໍ່</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row" style="height: 100vh;">
+        <section class="hero text-center bg-grey text-white d-flex justify-content-center align-items-center">
+            <div class="container mt-4 mb-4">
+                <img class="masthead-avatar" data-aos="zoom-out" data-aos-delay="2500"
+                    style="height: 140px; width: 140px; border-radius: 50%; box-shadow: 0 16px 32px rgba(48, 93, 197, 5);"
+                    src="./image/palee_logo.jpg" alt="...">
+                <br><br>
+                <h2 class="fw-bold mb-4" data-aos="fade-up" data-aos-duration="1500">ສູນປາລີບຳລຸງນັກຮຽນເກັ່ງ
+                    ຍິນດີຕ້ອນຮັບ
+                </h2>
+                <h5 class="lead mb-4 animated fadeIn" data-aos="fade-up" data-aos-delay="500" style="font-weight: bold;">
+                    ສູນປາລີຂອງພວກເຮົາພ້ອມສ້າງໃຫ້ທ່ານເປັນນັກຮຽນເກັ່ງລະດັບຊາດໄດ້</h5>
+                <button class="btn btn-primary btn-lg animated fadeIn" data-aos="zoom-in"
+                    data-aos-delay="800" onclick="sign_in()"><i class="fas fa-sign-in"></i>&nbsp;&nbsp;ສະໝັກຮຽນດຽວນີ້ເລີຍ</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-4 mb-5" data-aos="fade-up" data-aos-duration="1500">ລາຍລະອຽດ</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+                ໃນສູນຂອງພວກເຮົາທ່ານອາດຈະໄດ້ຮຽນຮູ້ທັກສະການວາງແຜນການຮຽນໃນຊີວິດຫຼາຍຢ່າງ ພ້ອມດ້ວຍກິດຈະກຳຕ່າງໆ</p>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="2000">
+                    <div class="card shadow-lg border-light rounded">
+                        <i class="fas fa-graduation-cap fa-5x text-primary mt-4"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">ຄວາມຮູ້ພາຍໃນຫ້ອງຮຽນ</h5>
+                            <p class="card-text">ຈະໄດ້ຮຽນຮູ້ທັກສະການແກ້ໂຈດ ແລະ ການແກ້ໄຂບັນຕ່າງໆໃນບົດຮຽນ
+                                ທຳໃຫ້ເຂົ້າໃຈຫົວໃຈຫຼັກຂອງບົດຮຽນຢ່າງແທ້ຈິງ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000">
+                    <div class="card shadow-lg border-light rounded">
+                        <i class="fas fa-people-arrows fa-5x text-success mt-4"></i>
+
+                        <div class="card-body">
+                            <h5 class="card-title">ທັກສະຕົວຈິງ</h5>
+                            <p class="card-text">ສອນທັກສະການເຂົ້າຫາສັງຄົມ, ທັກສະການເວົ້າ ແລະ
+                                ທັກສະການວາງແຜນຊີວິດໃຫ້ດີຂື້ນ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="400" data-aos-duration="2000">
+                    <div class="card shadow-lg border-light rounded">
+                        <i class="fas fa-lightbulb fa-5x text-warning mt-4"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">ທັກສະຄວາມຄິດນອກກອບ</h5>
+                            <p class="card-text">ສ້າງໃຫ້ນັກຮຽນມີຄວາມຄິດນອກກອບ ແລະ ຄວາມສາມາດສາມາດພິເສດ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="courses" class="py-5">
+        <div class="container text-center">
+            <h2 class="display-4 mb-4" data-aos="fade-up">ຫຼັກສູດຂອງພວກເຮົາ</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">ເນັ້ນໃຫ້ທ່ານສາມາດເກັ່ງໄດ້ພາຍໃນສາມເດືອນ</p>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <h5 class="card-title">ການເປັນນັກຮຽນເກັ່ງໃນສາຍຄິດໄລ່</h5>
+                            <p class="card-text">ບໍ່ວ່າທ່ານຈະແມ່ນໃຜ ຢູ່ໃສກໍຕາມທ່ານກໍມີໂອກາດເປັນນັກຮຽນເກັ່ງໃນລະດັບເມືອງ,
+                                ແຂວງ, ແລະ ລະດັບຊາດໄດ້ ເມື່ອທ່ານຮູ້ຈັກສູນປາລີ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <h5 class="card-title">ການເປັນນັກຮຽນເກັ່ງໃນສາຍພາສາ</h5>
+                            <p class="card-text">ເນັ້ນໃຫ້ທ່ານ ສາມາດສື່ສານນຳຄົນຕ່າງປະເທດໄດ້ເປັນຢ່າງດີ
+                                ພ້ອມມີທັກສະໃນການສະໝັກ ຫຼື ສຳພາດວຽກງານຕ່າງໆໆ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <h5 class="card-title">ພິເສດກວ່ານັ້ນ</h5>
+                            <p class="card-text">ທາງສູນກໍຈະມີທຶນໃຫ້ນັກຮຽນສາມາດຮຽນຕໍ່ທີ່ປະເທດຈີນໄດ້ເມື່ອມີ HSK4
+                                ພ້ອມທືນອື່ນໆທີ່ເຮົາສາມາດມີໂອກາດໃນການສອບເສັງໄດ້</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-4 mb-4" data-aos="fade-up">ຕິດຕໍ່ພວກເຮົາ</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">ພວກເຮົາຍິນດີທີ່ຈະໃຫ້ຄຳປຶກສາ ແລະ ຊ່ວຍເຫຼືອທ່ານ
+            </p>
+            <a href="https://wa.me/02052709503" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">
+                ທາງ WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 EduCenter. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper, and AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS animations -->
+    <script>
+        AOS.init({
+            duration: 1500, // Animation duration
+            easing: 'ease-in-out', // Animation easing
+            once: true, // Trigger animations once
+        });
+    </script>
+    <script>
+        function sign_in() {
+            window.location.href = 'student.html';
+        }
+    </script>
+</body>
+
+</html>

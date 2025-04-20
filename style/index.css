@@ -1,0 +1,32 @@
+* {
+    font-family: 'Noto Sans Lao';
+}
+
+.hero {
+    background: linear-gradient(to bottom, rgba(14, 15, 16, 0.5), rgba(5, 6, 8, 0.9)), url('../image/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-body {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-body:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}

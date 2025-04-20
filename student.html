@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans Lao', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="addStudentForm" method="POST">
+            <div class="card mt-3 text-primary border-primary" style="margin-left: 30px; margin-right: 30px; font-weight: bold;">
+                <div class="mb-3">
+                    <h4 class="text-center mt-4" style="font-weight: bold;">ຟອມເພີ່ມຂໍ້ມູນນັກຮຽນ</h4>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="studentID">ລະຫັດນັກຮຽນ</label>
+                                <input type="text" class="form-control border-primary" name="studentID" id="studentID" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="studentName">ຊື່</label>
+                                <input type="text" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນຊື່" name="studentName" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="studentLastname">ນາມສະກຸນ</label>
+                                <input type="text" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນນາມສະກຸນ" name="studentLastname" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="gender">ເພດ</label>
+                                <select name="gender" id="gender" class="form-control border-primary" required>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="tel">ເບີໂທ</label>
+                                <input type="number" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນເບີໂທ" name="tel" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="phone">ເບີຜູ້ປົກຄອງ</label>
+                                <input type="number" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນເບີໂທ" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="school">ໂຮງຮຽນ</label>
+                                <input type="text" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນຊື່ໂຮງຮຽນ" name="school" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="district">ເມືອງ ແລະ ແຂວງ</label>
+                                <select name="district" id="district" class="form-control border-primary" required>
+                                    <option value="">ກະລຸນາເລືອກ</option>
+                                    <!-- You can populate this dynamically from your backend -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group mb-3">
+                                <label for="stayID">ການພັກເຊົາ</label>
+                                <select name="stayID" id="stay" class="form-control border-primary" required>
+                                    <option value="">ກະລຸນາເລືອກ</option>
+                                    <!-- You can populate this dynamically from your backend -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-sign-in">&nbsp;</i>ໄປຕໍ່</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./script/studentID.js"></script>
+    <script src="./script/insertStudent.js"></script>
+    <script>
+        function validateForm(event) {
+            var studentName = document.querySelector('input[name="studentName"]').value;
+            var studentLastname = document.querySelector('input[name="studentLastname"]').value;
+            var gender = document.querySelector('select[name="gender"]').value;
+            var tel = document.querySelector('input[name="tel"]').value;
+            var phone = document.querySelector('input[name="phone"]').value;
+            var school = document.querySelector('input[name="school"]').value;
+            var district = document.querySelector('select[name="district"]').value;
+            var stayID = document.querySelector('select[name="stayID"]').value;
+
+            if (!studentName || !studentLastname || !gender || !tel || !phone || !school || !district || !stayID) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ກະລຸນາປ້ອນຂໍ້ມູນທັງໝົດ',
+                    text: 'ກະລຸນາປ້ອນທຸກຂໍ້ມູນ!',
+                });
+                event.preventDefault();
+                return false;
+            }
+
+            // Check phone number format
+            if (!/^\d{11}$/.test(tel) || !/^\d{11}$/.test(phone)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ກະລຸນາປ້ອນເບີໂທ 11 ຕົວ!',
+                    text: 'ເບີໂທ ຕ້ອງເປັນຕົວເລກ 11 ຕົວ!',
+                });
+                event.preventDefault();
+                return false;
+            }
+            return true;
+        }
+        document.querySelector("form").addEventListener("submit", validateForm);
+    </script>
+
+    <!-- Load Bootstrap JS and other necessary scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
