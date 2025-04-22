@@ -167,7 +167,7 @@ document.getElementById("save").addEventListener("click", function (event) {
   Swal.fire({
     title: "ບິນລົງທະບຽນ",
     html: billContent,
-    iconHtml: `<img src="../image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
+    iconHtml: `<img src="./image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
     showCancelButton: true,
     confirmButtonText: "ບັນທຶກ",
     cancelButtonText: "ຍົກເລີກ",
