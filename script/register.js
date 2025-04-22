@@ -123,10 +123,10 @@ document.getElementById("save").addEventListener("click", function (event) {
     return;
   }
   let total = 0;
-  let billContent = `<div style="text-align:center; font-size: 10px; font-weight: bold; margin-bottom: 20px;">
-                        <h5>ລະຫັດໃບບິນ: ${
+  let billContent = `<div style="text-align:center; font-size: 10px; font-weight: bold; ">
+                        <h6>ລະຫັດໃບບິນ: ${
                           document.getElementById("regisID").value
-                        }</h5>
+                        }</h6>
                         <h6>ລະຫັດນັກຮຽນ: ${studentID}</h6>
                       </div>
                       <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;" class="table">
@@ -144,9 +144,9 @@ document.getElementById("save").addEventListener("click", function (event) {
     const costCell = row.querySelectorAll("td")[2]; 
     if (nameCell && costCell) {
       billContent += `<tr style="border: 1px solid #ddd;">
-            <td style="padding: 8px; text-align: left; font-size: 14px"><p>${idCell.textContent}</p></td>
-                                <td style="padding: 8px; text-align: left; font-size: 14px"><p>${nameCell.textContent}</p></td>
-                                <td style="padding: 8px; text-align: left; font-size: 14px"><p>${costCell.textContent}</p></td>
+            <td style="padding: 8px; text-align: left; font-size: 12px"><p>${idCell.textContent}</p></td>
+                                <td style="padding: 8px; text-align: left; font-size: 12px"><p>${nameCell.textContent}</p></td>
+                                <td style="padding: 8px; text-align: left; font-size: 12px"><p>${costCell.textContent}</p></td>
                             </tr>`;
       total += parseFloat(costCell.textContent);
     }
@@ -154,13 +154,13 @@ document.getElementById("save").addEventListener("click", function (event) {
 
   billContent += `</tbody></table>
                     <div style="text-align: right; font-size: 16px; margin-top: 10px;">
-                        <h5>ລວມເງິນທັງໝົດ: ${total.toFixed(0)} ກີບ</h5>
+                        <h6>ລວມເງິນທັງໝົດ: ${total.toFixed(0)} ກີບ</h6>
                     </div>
                     <div style="text-align: center; margin-top: 20px; font-size: 16px;">
-                        <h5 class="text-danger">ຢ່າລືມແຄັບຈໍໄວ້ເປັນຫຼັກຖານ</h5>
+                        <h6 class="text-danger">ຢ່າລືມແຄັບຈໍໄວ້ເປັນຫຼັກຖານ</h6>
                     </div>
                     <div style="text-align: center; margin-top: 20px; font-size: 16px;">
-                        <h5 class="text-danger">ໃຫ້ຖືເອົາບິນມາຈ່າຍຄ່າຮຽນທີ່ສູນ</h5>
+                        <h6 class="text-danger">ໃຫ້ຖືເອົາບິນມາຈ່າຍຄ່າຮຽນທີ່ສູນ</h6>
                     </div>
                     `;
 
@@ -171,6 +171,9 @@ document.getElementById("save").addEventListener("click", function (event) {
     showCancelButton: true,
     confirmButtonText: "ບັນທຶກ",
     cancelButtonText: "ຍົກເລີກ",
+    customClass: {
+      title: 'swal-title-custom',
+    }
   }).then((result) => {
     if (result.isConfirmed) {
       insertRegistration();
