@@ -34,9 +34,10 @@ document
         } else {
           Swal.fire({
             icon: "error",
-            title: "ບັນຫາ",
-            text: "ມີບັນຫາກັບການເພີ່ມນັກຮຽນ!",
+            title: "ບັນຫາການລົງທະບຽນຊໍ້າກັນ",
+            text: "ລອງໃໝ່ອີກຄັ້ງ",
           });
+          window.location.reload();
         }
       })
       .catch((err) => {
