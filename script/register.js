@@ -165,25 +165,40 @@ document.getElementById("save").addEventListener("click", function (event) {
                     `;
 
   Swal.fire({
-    title: "ບິນລົງທະບຽນ",
-    html: billContent,
-    iconHtml: `<img src="./image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
-    showCancelButton: true,
-    confirmButtonText: "ບັນທຶກ",
-    cancelButtonText: "ຍົກເລີກ",
-    customClass: {
-      title: 'swal-title-custom',
-    }
-  }).then((result) => {
-    if (result.isConfirmed) {
-      insertRegistration();
-      insertRegisdetail();
-      insertPayment();
-    } else {
-      Swal.close();
-    }
-  });
+  title: "ບິນລົງທະບຽນ",
+  html: billContent,
+  iconHtml: `<img src="../image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
+  showCancelButton: true,
+  confirmButtonText: "ບັນທຶກ",
+  cancelButtonText: "ຍົກເລີກ",
+}).then((result) => {
+  if (result.isConfirmed) {
+    insertRegistration()
+      .then(() => insertRegisdetail())
+      .then(() => insertPayment())
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "ລົງທະບຽນສຳເລັດແລ້ວ",
+          text: "ເຮົາໄດ້ບັນທຶກຂໍ້ມູນຂອງທ່ານໄວ້ແລ້ວ",
+          confirmButtonText: "ຢືນຢັນ",
+        }).then(() => {
+          window.location.href = "index.html";
+        });
+      })
+      .catch((error) => {
+        console.error("Registration flow failed:", error);
+        Swal.fire({
+          icon: "error",
+          title: "ເກີດຂໍ້ຜິດພາດ",
+          text: "ບໍ່ສາມາດລົງທະບຽນໄດ້ ກະລຸນາລອງໃໝ່",
+        });
+      });
+  } else {
+    Swal.close();
+  }
 });
+
 
 function insertRegistration() {
   const registration = {
