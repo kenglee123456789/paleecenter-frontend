@@ -37,6 +37,7 @@ document
             title: "ບັນຫາ",
             text: "ມີບັນຫາກັບການເພີ່ມນັກຮຽນ!",
           });
+          window.location.reload();
         }
       })
       .catch((err) => {

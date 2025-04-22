@@ -40,3 +40,7 @@ td {
     text-align: center;
     vertical-align: middle;
 }
+.swal-title-custom {
+    font-size: 18px !important;
+    font-family: 'Noto Sans Lao', sans-serif; /* Optional: for better Lao text */
+  }
