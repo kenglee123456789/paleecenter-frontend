@@ -123,18 +123,18 @@ document.getElementById("save").addEventListener("click", function (event) {
     return;
   }
   let total = 0;
-  let billContent = `<div style="text-align:center; font-size: 18px; font-weight: bold; margin-bottom: 20px;">
-                        <h3>ລະຫັດໃບບິນ: ${
+  let billContent = `<div style="text-align:center; font-size: 10px; font-weight: bold; margin-bottom: 20px;">
+                        <h5>ລະຫັດໃບບິນ: ${
                           document.getElementById("regisID").value
-                        }</h3>
-                        <h5>ລະຫັດນັກຮຽນ: ${studentID}</h5>
+                        }</h5>
+                        <h6>ລະຫັດນັກຮຽນ: ${studentID}</h6>
                       </div>
                       <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;" class="table">
                           <thead>
                               <tr style="background-color: #f2f2f2;">
-                                  <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">ລະຫັດວິຊາ</th>
-                                  <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">ວິຊາ ແລະ ລະດັບ</th>
-                                  <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">ລາຄາ</th>
+                                  <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 14px">ລະຫັດວິຊາ</th>
+                                  <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 14px">ວິຊາ ແລະ ລະດັບ</th>
+                                  <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-size: 14px">ລາຄາ</th>
                               </tr>
                           </thead>
                           <tbody>`;
@@ -144,9 +144,9 @@ document.getElementById("save").addEventListener("click", function (event) {
     const costCell = row.querySelectorAll("td")[2]; 
     if (nameCell && costCell) {
       billContent += `<tr style="border: 1px solid #ddd;">
-            <td style="padding: 8px; text-align: left;"><h6>${idCell.textContent}</h6></td>
-                                <td style="padding: 8px; text-align: left;"><h6>${nameCell.textContent}</h6></td>
-                                <td style="padding: 8px; text-align: left;"><h6>${costCell.textContent}</h6></td>
+            <td style="padding: 8px; text-align: left; font-size: 14px"><p>${idCell.textContent}</p></td>
+                                <td style="padding: 8px; text-align: left; font-size: 14px"><p>${nameCell.textContent}</p></td>
+                                <td style="padding: 8px; text-align: left; font-size: 14px"><p>${costCell.textContent}</p></td>
                             </tr>`;
       total += parseFloat(costCell.textContent);
     }
@@ -167,7 +167,7 @@ document.getElementById("save").addEventListener("click", function (event) {
   Swal.fire({
     title: "ບິນລົງທະບຽນ",
     html: billContent,
-    iconHtml: `<img src="../image/palee_logo.jpg" alt="Bill Icon" style="width: 70px; height: 70px;border-radius: 50%">`,
+    iconHtml: `<img src="../image/palee_logo.jpg" alt="Bill Icon" style="width: 70px; height: 70px;border-radius: 35%">`,
     showCancelButton: true,
     confirmButtonText: "ບັນທຶກ",
     cancelButtonText: "ຍົກເລີກ",
