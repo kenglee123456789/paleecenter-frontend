@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
           rowText += cell.textContent.toLowerCase();
         });
         if (rowText.includes(searchQuery)) {
-          row.style.display = ""; 
+          row.style.display = "";
         } else {
-          row.style.display = "none"; 
+          row.style.display = "none";
         }
       });
     });
@@ -101,7 +101,7 @@ function updateTotal() {
   const rows = tableDetail.querySelectorAll("tr");
   let total = 0;
   rows.forEach((row) => {
-    const costCell = row.querySelectorAll("td")[2]; 
+    const costCell = row.querySelectorAll("td")[2];
     if (costCell) {
       total += parseFloat(costCell.textContent);
     }
@@ -139,9 +139,9 @@ document.getElementById("save").addEventListener("click", function (event) {
                           </thead>
                           <tbody>`;
   rows.forEach((row, index) => {
-    const idCell = row.querySelectorAll("td")[0]; 
-    const nameCell = row.querySelectorAll("td")[1]; 
-    const costCell = row.querySelectorAll("td")[2]; 
+    const idCell = row.querySelectorAll("td")[0];
+    const nameCell = row.querySelectorAll("td")[1];
+    const costCell = row.querySelectorAll("td")[2];
     if (nameCell && costCell) {
       billContent += `<tr style="border: 1px solid #ddd;">
             <td style="padding: 8px; text-align: left; font-size: 12px"><p>${idCell.textContent}</p></td>
@@ -172,8 +172,8 @@ document.getElementById("save").addEventListener("click", function (event) {
     confirmButtonText: "ບັນທຶກ",
     cancelButtonText: "ຍົກເລີກ",
     customClass: {
-      title: 'swal-title-custom',
-    }
+      title: "swal-title-custom",
+    },
   }).then((result) => {
     if (result.isConfirmed) {
       insertRegistration();
@@ -184,7 +184,6 @@ document.getElementById("save").addEventListener("click", function (event) {
     }
   });
 });
-
 
 function insertRegistration() {
   const registration = {
@@ -207,13 +206,13 @@ function insertRegisdetail() {
   const rows = tableDetail.querySelectorAll("tr");
 
   rows.forEach((row) => {
-    const subjectID = row.querySelector("td").textContent; 
-    const subjectCost = row.querySelectorAll("td")[2].textContent; 
+    const subjectID = row.querySelector("td").textContent;
+    const subjectCost = row.querySelectorAll("td")[2].textContent;
 
     const regisdetail = {
       regisID: document.querySelector('input[name="regisID"]').value,
       subject: subjectID,
-      scholarship: "1", 
+      scholarship: "2",
       Cost: subjectCost,
     };
 
@@ -238,7 +237,7 @@ function insertPayment() {
   const payment = {
     regisID: document.querySelector('input[name="regisID"]').value,
     amount: document.getElementById("total").value,
-    pay: "0",
+    pay: 0,
     pend: document.getElementById("total").value,
     date: new Date().toISOString().split("T")[0],
   };
