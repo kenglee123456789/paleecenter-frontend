@@ -209,7 +209,7 @@ function insertRegisdetail() {
     const regisdetail = {
       regisID: document.querySelector('input[name="regisID"]').value,
       subject: subjectID,
-      scholarship: "2", 
+      scholarship: "1", 
       Cost: subjectCost,
     };
 
