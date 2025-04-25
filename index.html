@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +13,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container" style="font-weight: bold;">
             <a class="navbar-brand" href="#">Palee Elite Training Center</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">ໜ້າຫຼັກ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#palee" class="nav-link">ຜົນງານຂອງສູນ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">ລາຍລະອຽດ</a>
@@ -42,35 +46,40 @@
     <div class="row" style="height: 100vh;">
         <section class="hero text-center bg-grey text-white d-flex justify-content-center align-items-center">
             <div class="container mt-4 mb-4">
-                <img class="masthead-avatar" data-aos="zoom-out" data-aos-delay="2500"
-                    style="height: 140px; width: 140px; border-radius: 50%; box-shadow: 0 16px 32px rgba(48, 93, 197, 5);"
-                    src="./image/palee_logo.jpg" alt="...">
+                <img class="masthead-avatar" data-aos="zoom-out" data-aos-delay="2500" style="height: 140px; width: 140px; border-radius: 50%; box-shadow: 0 16px 32px rgba(48, 93, 197, 5);" src="./image/palee_logo.jpg" alt="...">
                 <br><br>
-                <h2 class="fw-bold mb-4" data-aos="fade-up" data-aos-duration="1500">ສູນປາລີບຳລຸງນັກຮຽນເກັ່ງ
-                    ຍິນດີຕ້ອນຮັບ
+                <h2 class="fw-bold mb-4" data-aos="fade-up" data-aos-duration="1500">ສູນປາລີບຳລຸງນັກຮຽນເກັ່ງ ຍິນດີຕ້ອນຮັບ
                 </h2>
                 <h5 class="lead mb-4 animated fadeIn" data-aos="fade-up" data-aos-delay="500" style="font-weight: bold;">
                     ສູນປາລີຂອງພວກເຮົາພ້ອມສ້າງໃຫ້ທ່ານເປັນນັກຮຽນເກັ່ງລະດັບຊາດໄດ້</h5>
-                <button class="btn btn-primary btn-lg animated fadeIn" data-aos="zoom-in"
-                    data-aos-delay="800" onclick="sign_in()"><i class="fas fa-sign-in"></i>&nbsp;&nbsp;ສະໝັກຮຽນດຽວນີ້ເລີຍ</button>
+                <button class="btn btn-primary btn-lg animated fadeIn" data-aos="zoom-in" data-aos-delay="800" onclick="sign_in()"><i
+                            class="fas fa-sign-in"></i>&nbsp;&nbsp;ສະໝັກຮຽນດຽວນີ້ເລີຍ</button>
             </div>
         </section>
     </div>
 
     <!-- About Section -->
+    <section id="palee">
+        <div class="position-relative d-inline-block justify-content-center">
+            <img src="./image/palee.jpg" alt="Image" class="img-fluid" data-aos="zoom-out" data-aos-delay="1000">
+            <div class="position-absolute top-0 start-0 w-100 h-100">
+            </div>
+        </div>
+    </section>
     <section id="about" class="py-5 bg-light">
         <div class="container text-center">
             <h2 class="display-4 mb-5" data-aos="fade-up" data-aos-duration="1500">ລາຍລະອຽດ</h2>
             <p class="lead mb-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
-                ໃນສູນຂອງພວກເຮົາທ່ານອາດຈະໄດ້ຮຽນຮູ້ທັກສະການວາງແຜນການຮຽນໃນຊີວິດຫຼາຍຢ່າງ ພ້ອມດ້ວຍກິດຈະກຳຕ່າງໆ</p>
+                ໃນສູນຂອງພວກເຮົາທ່ານອາດຈະໄດ້ຮຽນຮູ້ທັກສະການວາງແຜນການຮຽນໃນຊີວິດຫຼາຍຢ່າງ ພ້ອມດ້ວຍກິດຈະກຳຕ່າງໆ
+            </p>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="2000">
                     <div class="card shadow-lg border-light rounded">
                         <i class="fas fa-graduation-cap fa-5x text-primary mt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title">ຄວາມຮູ້ພາຍໃນຫ້ອງຮຽນ</h5>
-                            <p class="card-text">ຈະໄດ້ຮຽນຮູ້ທັກສະການແກ້ໂຈດ ແລະ ການແກ້ໄຂບັນຕ່າງໆໃນບົດຮຽນ
-                                ທຳໃຫ້ເຂົ້າໃຈຫົວໃຈຫຼັກຂອງບົດຮຽນຢ່າງແທ້ຈິງ</p>
+                            <p class="card-text">ຈະໄດ້ຮຽນຮູ້ທັກສະການແກ້ໂຈດ ແລະ ການແກ້ໄຂບັນຕ່າງໆໃນບົດຮຽນ ທຳໃຫ້ເຂົ້າໃຈຫົວໃຈຫຼັກຂອງບົດຮຽນຢ່າງແທ້ຈິງ
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -80,8 +89,8 @@
 
                         <div class="card-body">
                             <h5 class="card-title">ທັກສະຕົວຈິງ</h5>
-                            <p class="card-text">ສອນທັກສະການເຂົ້າຫາສັງຄົມ, ທັກສະການເວົ້າ ແລະ
-                                ທັກສະການວາງແຜນຊີວິດໃຫ້ດີຂື້ນ</p>
+                            <p class="card-text">ສອນທັກສະການເຂົ້າຫາສັງຄົມ, ທັກສະການເວົ້າ ແລະ ທັກສະການວາງແຜນຊີວິດໃຫ້ດີຂື້ນ
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -108,8 +117,8 @@
                     <div class="card shadow-lg">
                         <div class="card-body">
                             <h5 class="card-title">ການເປັນນັກຮຽນເກັ່ງໃນສາຍຄິດໄລ່</h5>
-                            <p class="card-text">ບໍ່ວ່າທ່ານຈະແມ່ນໃຜ ຢູ່ໃສກໍຕາມທ່ານກໍມີໂອກາດເປັນນັກຮຽນເກັ່ງໃນລະດັບເມືອງ,
-                                ແຂວງ, ແລະ ລະດັບຊາດໄດ້ ເມື່ອທ່ານຮູ້ຈັກສູນປາລີ</p>
+                            <p class="card-text">ບໍ່ວ່າທ່ານຈະແມ່ນໃຜ ຢູ່ໃສກໍຕາມທ່ານກໍມີໂອກາດເປັນນັກຮຽນເກັ່ງໃນລະດັບເມືອງ, ແຂວງ, ແລະ ລະດັບຊາດໄດ້ ເມື່ອທ່ານຮູ້ຈັກສູນປາລີ
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -117,8 +126,8 @@
                     <div class="card shadow-lg">
                         <div class="card-body">
                             <h5 class="card-title">ການເປັນນັກຮຽນເກັ່ງໃນສາຍພາສາ</h5>
-                            <p class="card-text">ເນັ້ນໃຫ້ທ່ານ ສາມາດສື່ສານນຳຄົນຕ່າງປະເທດໄດ້ເປັນຢ່າງດີ
-                                ພ້ອມມີທັກສະໃນການສະໝັກ ຫຼື ສຳພາດວຽກງານຕ່າງໆໆ</p>
+                            <p class="card-text">ເນັ້ນໃຫ້ທ່ານ ສາມາດສື່ສານນຳຄົນຕ່າງປະເທດໄດ້ເປັນຢ່າງດີ ພ້ອມມີທັກສະໃນການສະໝັກ ຫຼື ສຳພາດວຽກງານຕ່າງໆໆ
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -126,8 +135,8 @@
                     <div class="card shadow-lg">
                         <div class="card-body">
                             <h5 class="card-title">ພິເສດກວ່ານັ້ນ</h5>
-                            <p class="card-text">ທາງສູນກໍຈະມີທຶນໃຫ້ນັກຮຽນສາມາດຮຽນຕໍ່ທີ່ປະເທດຈີນໄດ້ເມື່ອມີ HSK4
-                                ພ້ອມທືນອື່ນໆທີ່ເຮົາສາມາດມີໂອກາດໃນການສອບເສັງໄດ້</p>
+                            <p class="card-text">ທາງສູນກໍຈະມີທຶນໃຫ້ນັກຮຽນສາມາດຮຽນຕໍ່ທີ່ປະເທດຈີນໄດ້ເມື່ອມີ HSK4 ພ້ອມທືນອື່ນໆທີ່ເຮົາສາມາດມີໂອກາດໃນການສອບເສັງໄດ້
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -141,8 +150,8 @@
             <h2 class="display-4 mb-4" data-aos="fade-up">ຕິດຕໍ່ພວກເຮົາ</h2>
             <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">ພວກເຮົາຍິນດີທີ່ຈະໃຫ້ຄຳປຶກສາ ແລະ ຊ່ວຍເຫຼືອທ່ານ
             </p>
-            <a href="https://wa.me/02052709503" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">
-                ທາງ WhatsApp
+            <a href="https://wa.me/02055786202" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-phone"></i> ທາງ WhatsApp
             </a>
         </div>
     </section>

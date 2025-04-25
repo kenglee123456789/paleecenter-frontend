@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         * {
@@ -15,102 +15,89 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="mt-5">
+    <div class="mt-5" data-aos="fade-up" style="margin-left: 15px;margin-right: 15px;">
         <form id="addStudentForm" method="POST">
-            <div class="card mt-3 text-primary border-primary" style="margin-left: 10px; margin-right: 10px; font-weight: bold;">
-                <div class="mb-3">
-                    <h4 class="text-center mt-4" style="font-weight: bold;">ຟອມເພີ່ມຂໍ້ມູນນັກຮຽນ</h4>
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h4 class="fw-bold mb-0"><i class="fas fa-user-graduate me-2"></i>ຟອມເພີ່ມຂໍ້ມູນນັກຮຽນ</h4>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="studentID">ລະຫັດນັກຮຽນ</label>
-                                <input type="text" class="form-control border-primary" name="studentID" id="studentID" readonly>
-                            </div>
+                <div class="card-body px-4 py-4">
+                    <div class="row g-3">
+                        <div class="col-md-3" data-aos="fade-right">
+                            <label class="form-label fw-bold text-primary">ລະຫັດນັກຮຽນ</label>
+                            <input type="text" class="form-control border-primary border-3 border rounded-3 fw-bold" name="studentID" id="studentID" readonly>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="studentName">ຊື່</label>
-                                <input type="text" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນຊື່" name="studentName" required>
-                            </div>
+                        <div class="col-md-3" data-aos="fade-up">
+                            <label class="form-label fw-bold text-primary">ຊື່</label>
+                            <input type="text" class="form-control border-primary border-3 border rounded-3 fw-bold" name="studentName" placeholder="ກະລຸນາປ້ອນຊື່" required>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="studentLastname">ນາມສະກຸນ</label>
-                                <input type="text" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນນາມສະກຸນ" name="studentLastname" required>
-                            </div>
+                        <div class="col-md-3" data-aos="fade-up">
+                            <label class="form-label fw-bold text-primary">ນາມສະກຸນ</label>
+                            <input type="text" class="form-control border-primary border-3 border rounded-3 fw-bold" name="studentLastname" placeholder="ກະລຸນາປ້ອນນາມສະກຸນ" required>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="gender">ເພດ</label>
-                                <select name="gender" id="gender" class="form-control border-primary" required>
-                                </select>
-                            </div>
+                        <div class="col-md-3" data-aos="fade-left">
+                            <label class="form-label fw-bold text-primary">ເພດ</label>
+                            <select name="gender" id="gender" class="form-select border-primary border-3 fw-bold border rounded-3" required>
+                                <option value="">ກະລຸນາເລືອກ</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="tel">ເບີໂທ</label>
-                                <input type="number" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນເບີໂທ" name="tel" required>
-                            </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-3" data-aos="fade-right">
+                            <label class="form-label fw-bold text-primary">ເບີໂທ</label>
+                            <input type="number" class="form-control border-primary border-3 border rounded-3 fw-bold" name="tel" placeholder="ກະລຸນາປ້ອນເບີໂທ" required>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="phone">ເບີຜູ້ປົກຄອງ</label>
-                                <input type="number" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນເບີໂທ" name="phone" required>
-                            </div>
+                        <div class="col-md-3" data-aos="fade-up">
+                            <label class="form-label fw-bold text-primary">ເບີຜູ້ປົກຄອງ</label>
+                            <input type="number" class="form-control border-primary border-3 border rounded-3 fw-bold" name="phone" placeholder="ກະລຸນາປ້ອນເບີຜູ້ປົກຄອງ" required>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="school">ໂຮງຮຽນ</label>
-                                <input type="text" class="form-control border-primary" placeholder="ກະລຸນາປ້ອນຊື່ໂຮງຮຽນ" name="school" required>
-                            </div>
+                        <div class="col-md-3" data-aos="fade-up">
+                            <label class="form-label fw-bold text-primary">ມາຈາກໂຮງຮຽນ</label>
+                            <input type="text" class="form-control border-primary border-3 border rounded-3 fw-bold" name="school" placeholder="ກະລຸນາປ້ອນຊື່ໂຮງຮຽນ" required>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="district">ເມືອງ ແລະ ແຂວງ</label>
-                                <select name="district" id="district" class="form-control border-primary" required>
-                                    <option value="">ກະລຸນາເລືອກ</option>
-                                    <!-- You can populate this dynamically from your backend -->
-                                </select>
-                            </div>
+                        <div class="col-md-3" data-aos="fade-left">
+                            <label class="form-label fw-bold text-primary">ເມືອງ ແລະ ແຂວງ</label>
+                            <select name="district" id="district" class="form-select border-primary border-3 fw-bold border rounded-3" required>
+                                <option value="">ກະລຸນາເລືອກ</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group mb-3">
-                                <label for="stayID">ການພັກເຊົາ</label>
-                                <select name="stayID" id="stay" class="form-control border-primary" required>
-                                    <option value="">ກະລຸນາເລືອກ</option>
-                                    <!-- You can populate this dynamically from your backend -->
-                                </select>
-                            </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3" data-aos="zoom-in">
+                            <label class="form-label fw-bold text-primary">ການພັກເຊົາ</label>
+                            <select name="stayID" id="stay" class="form-select border-primary border-3 fw-bold border rounded-3" required>
+                                <option value="">ກະລຸນາເລືອກ</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 mb-3">
-                            <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-sign-in">&nbsp;</i>ໄປຕໍ່</button>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <button class="btn btn-primary fw-bold shadow" type="submit">
+                                <i class="fas fa-sign-in-alt me-2"></i>ໄປຕໍ່
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+
+    <!-- Scripts -->
     <script src="./script/studentID.js"></script>
     <script src="./script/insertStudent.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function validateForm(event) {
-            var studentName = document.querySelector('input[name="studentName"]').value;
-            var studentLastname = document.querySelector('input[name="studentLastname"]').value;
-            var gender = document.querySelector('select[name="gender"]').value;
-            var tel = document.querySelector('input[name="tel"]').value;
-            var phone = document.querySelector('input[name="phone"]').value;
-            var school = document.querySelector('input[name="school"]').value;
-            var district = document.querySelector('select[name="district"]').value;
-            var stayID = document.querySelector('select[name="stayID"]').value;
+            const studentName = document.querySelector('input[name="studentName"]').value;
+            const studentLastname = document.querySelector('input[name="studentLastname"]').value;
+            const gender = document.querySelector('select[name="gender"]').value;
+            const tel = document.querySelector('input[name="tel"]').value;
+            const phone = document.querySelector('input[name="phone"]').value;
+            const school = document.querySelector('input[name="school"]').value;
+            const district = document.querySelector('select[name="district"]').value;
+            const stayID = document.querySelector('select[name="stayID"]').value;
 
             if (!studentName || !studentLastname || !gender || !tel || !phone || !school || !district || !stayID) {
                 Swal.fire({
@@ -125,7 +112,7 @@
             if (!/^\d{11}$/.test(tel) || !/^\d{11}$/.test(phone)) {
                 Swal.fire({
                     icon: 'error',
-                    title: 'ກະລຸນາປ້ອນເບີໂທ 11 ຕົວ!',
+                    title: 'ເບີໂທຜິດຮູບແບບ',
                     text: 'ເບີໂທ ຕ້ອງເປັນຕົວເລກ 11 ຕົວ!',
                 });
                 event.preventDefault();
@@ -135,12 +122,15 @@
         }
         document.querySelector("form").addEventListener("submit", validateForm);
     </script>
-
-    <!-- Load Bootstrap JS and other necessary scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
