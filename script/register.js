@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("http://localhost:3000/api/subject")
+    fetch("https://palee-backend.onrender.com/api/subject")
         .then((response) => response.json())
         .then((data) => {
             const tableBody = document.getElementById("tableBody");
@@ -159,7 +159,7 @@ document
 
             // 🔄 ສະແດງ message loading
             Swal.fire({
-                iconHtml: `<img src="../image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
+                iconHtml: `<img src="./image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
                 title: "ກຳລັງສົ່ງຂໍ້ມູນ...",
                 text: "ກະລຸນາລໍຖ້າ",
                 allowOutsideClick: false,
@@ -225,7 +225,7 @@ async function insertRegistration() {
     };
 
     const res = await fetch(
-        "http://localhost:3000/api/registration", {
+        "https://palee-backend.onrender.com/api/registration", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(registration),
@@ -247,7 +247,7 @@ async function insertRegisdetail() {
         };
 
         const res = await fetch(
-            "http://localhost:3000/api/regisdetail", {
+            "https://palee-backend.onrender.com/api/regisdetail", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(regisdetail),
@@ -267,7 +267,7 @@ async function insertPayment() {
         date: new Date().toISOString().split("T")[0],
     };
 
-    const res = await fetch("http://localhost:3000/api/payment", {
+    const res = await fetch("https://palee-backend.onrender.com/api/payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payment),
