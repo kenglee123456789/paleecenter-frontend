@@ -1,5 +1,5 @@
 function getNextStudentID() {
-    fetch("http://localhost:3000/api/students")
+    fetch("https://palee-backend.onrender.com/api/students")
         .then((response) => response.json())
         .then((data) => {
             document.getElementById("studentID").value = data.nextStudentID;
@@ -11,7 +11,7 @@ function getNextStudentID() {
 }
 
 function getGenderOptions() {
-    fetch("http://localhost:3000/api/gender")
+    fetch("https://palee-backend.onrender.com/api/gender")
         .then((response) => response.json())
         .then((data) => {
             const genderSelect = document.getElementById("gender");
@@ -36,7 +36,7 @@ function getGenderOptions() {
 }
 
 function getdistrictOptions() {
-    fetch("http://localhost:3000/api/district")
+    fetch("https://palee-backend.onrender.com/api/district")
         .then((response) => response.json())
         .then((data) => {
             const districtSelect = document.getElementById("district");
@@ -61,7 +61,7 @@ function getdistrictOptions() {
 }
 
 function getstayOptions() {
-    fetch("http://localhost:3000/api/stay")
+    fetch("https://palee-backend.onrender.com/api/stay")
         .then((response) => response.json())
         .then((data) => {
             const staySelect = document.getElementById("stay");
