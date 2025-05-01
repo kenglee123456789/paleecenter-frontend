@@ -1,5 +1,5 @@
 function getNextRegisID() {
-    fetch("http://localhost:3000/api/bill")
+    fetch("https://palee-backend.onrender.com/api/bill")
         .then((response) => response.json())
         .then((data) => {
             document.getElementById("regisID").value = data.nextBillID;
