@@ -15,7 +15,7 @@ document .querySelector("#addStudentForm") .addEventListener("submit", function(
             stayID: document.querySelector('select[name="stayID"]').value,
         };
     
-        fetch("http://localhost:3000/api/add-student", {
+        fetch("https://palee-backend.onrender.com/api/add-student", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
