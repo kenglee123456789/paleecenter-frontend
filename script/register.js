@@ -141,7 +141,10 @@ document
         billContent += `</tbody></table>
     <div style="text-align: right;"><h6 class="fw-bold">ລວມເງິນທັງໝົດ: ${total.toLocaleString()} ກີບ</h6></div>
     <div style="text-align: center;"><h6 class="text-danger fw-bold">ຢ່າລືມແຄັບຈໍໄວ້ເປັນຫຼັກຖານ</h6></div>
-    <div style="text-align: center;"><h6 class="text-danger fw-bold">ໃຫ້ຖືບິນມາຈ່າຍຄ່າຮຽນທີ່ສູນ</h6></div>`;
+    <div style="text-align: center;"><h6 class="text-danger fw-bold">ໃຫ້ຖືບິນມາຈ່າຍຄ່າຮຽນທີ່ສູນ</h6></div>
+    <div style="text-align: center;"><h5 class="text-success fw-bold">ຕິດຕໍ່: 02054337787</h5></div>
+    <div style="text-align: center;"><h5 class="text-success fw-bold">ຫຼື: 02055061124</h5></div>
+    <div style="text-align: center;"><h6 class="text-primary fw-bold">ສະຖານທີ່: ບ້ານ ໜອງວຽງຄຳ(ໃກ້ຫໍພັກຊີເກມ ມຊ), ເມືອງ ໄຊທານີ, ແຂວງ ນະຄອນຫຼວງວຽງຈັນ</h6></div>`;
 
         const result = await Swal.fire({
             // title: "ບິນລົງທະບຽນ",
