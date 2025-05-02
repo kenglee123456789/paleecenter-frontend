@@ -161,7 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
     if (result.isConfirmed) {
       Swal.fire({
-        iconHtml: `<img src="./image/palee_logo.jpg" alt="" style="width: 70px; height: 70px;border-radius: 35%">`,
         title: "ກຳລັງສົ່ງຂໍ້ມູນ...",
         text: "ກະລຸນາລໍຖ້າ",
         allowOutsideClick: false,
