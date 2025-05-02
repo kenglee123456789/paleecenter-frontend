@@ -26,8 +26,14 @@ document .querySelector("#addStudentForm") .addEventListener("submit", function(
             .then((data) => {
                 if (data.message === "Student added successfully!") {
                     localStorage.setItem("studentID", formData.studentID);
+                    let x = 0;
+                    if (formData.stayID === "2") {
+                        x = 200000;
+                    }
+                    localStorage.setItem("stayValue", x.toString());
                     window.location.href = "register.html";
-                } else if (data.message === "Male dorm full") {
+                }
+                 else if (data.message === "Male dorm full") {
                     Swal.fire({
                         icon: "warning",
                         title: "ຕ້ອງຂໍອະໄພດ້ວຍ",
