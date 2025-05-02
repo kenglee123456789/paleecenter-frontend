@@ -24,7 +24,8 @@
                 <div class="row">
                   <div class="form-group">
                     <h5 class="text-primary fw-bold">ລະຫັດໃບບິນ:&nbsp;&nbsp;</h5>
-                    <input type="text" class="form-control border-primary fw-bold border border-3" id="regisID" readonly name="regisID" value="" />
+                    <input type="text" class="form-control border-primary fw-bold border border-3" id="regisID" readonly
+                      name="regisID" value="" />
                   </div>
                 </div>
               </div>
@@ -33,6 +34,11 @@
               </div>
               <div class="col-md-6 fw-bold">
                 <h5 class="text-center">ວັນທີ:&nbsp;&nbsp;<span id="today"></span></h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 fw-bold">
+                <input type="hidden" id="stayID" class="form-control text-center" readonly />
               </div>
             </div>
           </div>
@@ -47,7 +53,8 @@
           <div class="search-input-container animate-zoom">
             <div class="input-group">
               <span class="input-group-text border-primary border border-3"><i class="fas fa-search"></i></span>
-              <input type="text" class="form-control border-primary border border-3 fw-bold" placeholder="ຄົ້ນຫາວິຊາ..." id="searchInput" />
+              <input type="text" class="form-control border-primary border border-3 fw-bold" placeholder="ຄົ້ນຫາວິຊາ..."
+                id="searchInput" />
             </div>
           </div>
 
@@ -93,9 +100,13 @@
                 </div>
               </div>
               <div class="col-md-6">
+                <div class="text-danger fw-bold" id="dormCost">
+                  <h5 class="mb-3">ຄ່ານອນຫໍພັກໃນແມ່ນ: 200,000 ກີບ</h5>
+                </div>
                 <div class="form-group container mt-3 mt-md-0">
                   <label for="" class="fw-bold">ລວມຈຳນວນເງິນທັງໝົດ:</label>
-                  <input type="text" class="form-control border-primary fw-bold border border-3" name="amount" id="total" readonly />
+                  <input type="text" class="form-control border-primary fw-bold border border-3" name="amount"
+                    id="total" readonly />
                 </div>
               </div>
             </div>
@@ -105,14 +116,31 @@
     </form>
   </div>
 
-  <!-- Date Formatter -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const stayValue = parseInt(localStorage.getItem("stayValue")) || 0;
+      document.getElementById("stayID").value = stayValue;
+  
+      const dormCostDiv = document.getElementById("dormCost");
+      if (stayValue === 0 && dormCostDiv) {
+        dormCostDiv.style.display = "none";
+      }
+    });
+  </script>
+  
   <script>
     const today = new Date();
     const formattedDate = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
     document.getElementById('today').textContent = formattedDate;
   </script>
-
-  <!-- Zoom-in Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const stayValue = localStorage.getItem("stayValue");
+      if (stayValue !== null) {
+        document.getElementById("stayID").value = stayValue;
+      }
+    });
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const animatedElements = document.querySelectorAll(".animate-zoom");
