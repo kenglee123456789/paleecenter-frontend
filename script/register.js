@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const warn = await Swal.fire({
       icon: "warning",
-      title: "ເຕືອນກ່ອນ!",
-      text: "ຖ້າໝັ້ນໃຈແລ້ວ ຢ່າລືມແຄັບຈໍໃບບິນກ່ອນກົດບັນທຶກ",
+      title: "ໝາຍເຫດ!",
+      text: "ຖ້າໝັ້ນໃຈແລ້ວ ກະລຸນາແຄັບຈໍໃບບິນກ່ອນກົດບັນທຶກ",
       showCancelButton: true,
       confirmButtonText: "ດຳເນີນການຕໍ່",
       cancelButtonText: "ກັບຄືນ",
