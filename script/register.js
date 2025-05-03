@@ -100,7 +100,16 @@ document.addEventListener("DOMContentLoaded", function () {
         text: "ກະລຸນາເພີ່ມວິຊາກ່ອນທີ່ຈະບັນທຶກ",
       });
     }
+    const warn = await Swal.fire({
+      icon: "warning",
+      title: "ເຕືອນກ່ອນ!",
+      text: "ຖ້າໝັ້ນໃຈແລ້ວ ຢ່າລືມແຄັບຈໍໃບບິນກ່ອນກົດບັນທຶກ",
+      showCancelButton: true,
+      confirmButtonText: "ດຳເນີນການຕໍ່",
+      cancelButtonText: "ກັບຄືນ",
+    });
   
+    if (!warn.isConfirmed) return;
     let total = 0;
     const stayValue = parseInt(document.getElementById("stayID").value) || 0;
   
@@ -139,8 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
     total += stayValue;
     billContent += `</tbody></table>`;
   
-    if (stayValue > 0) {
-      billContent += `<div style="text-align: right;"><h6 class="fw-bold">ຄ່ານອນຫໍພັກໃນແມ່ນ: ${stayValue.toLocaleString()} ກີບ</h6></div>`;
+    if (stayValue === 200000) {
+      billContent += `<div style="text-align: right;"><h6 class="fw-bold">ຄ່ານໍ້າ, ໄຟ, ຂີ້ເຫຍື້ອ: ${stayValue.toLocaleString()} ກີບ</h6></div>`;
+    }
+    else {
+      billContent += `<div style="text-align: right;"><h6 class="fw-bold">ຄ່າໄຟ: ${stayValue.toLocaleString()} ກີບ</h6></div>`;
     }
   
     billContent += `
